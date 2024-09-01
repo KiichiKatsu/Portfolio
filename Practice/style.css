@@ -1,0 +1,67 @@
+/* CSS Reset from https://www.joshwcomeau.com/css/custom-css-reset/ */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+body { line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; }
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+#root, #__next { isolation: isolate; }
+/*------------------------------------------------------------------*/
+:root {
+    /* Colours */
+    --primary:       #4D84F4;
+    --primary-light: color-mod(var(--color-primary) tint(15%));
+    --primary-dark:  color-mod(var(--color-primary) shade(15%));
+
+    --accent:       #f5414f;
+    --accent-light: color-mod(var(--color-accent) tint(15%));
+    --accent-dark:  color-mod(var(--color-accent) shade(10%));
+
+    --white:       hsla(210, 4%, 95%, 1);
+    --gray:        hsla(210, 4%, 80%, 1);
+    --black:       hsla(210, 4%, 15%, 1);
+
+    --selected:    color-mod(var(--primary) alpha(20%));
+    --success:     hsla(117, 96%, 35%, 1);
+    --error:       hsla(0, 96%, 35%, 1);
+    --warning:     hsla(48, 96%, 45%, 1);
+
+    /* Typography */
+    --font-heading: "Segoe UI";
+    --font-body:    "Segoe UI";
+    
+    --text-base:    clamp(14px, 1.6rem, 21px);
+    --text-scale:   1.3;
+
+    --text-xxs:     calc(var(--text-base) / (var(--text-scale) * var(--text-scale)));
+    --text-xs:      calc(var(--text-base) / var(--text-scale));
+    --text-sm:      var(--text-base);
+    --text-md:      calc(var(--text-base) * var(--text-scale));
+    --text-lg:      calc(var(--text-base) * var(--text-scale) * var(--text-scale));
+    --text-xl:      calc(var(--text-base) * var(--text-scale) * var(--text-scale) * var(--text-scale));
+
+    /* Spacing */
+    --space-unit:   clamp(1rem, 5vw, 2rem);
+    --space-xxs:    calc(0.25 * var(--space-unit));
+    --space-xs:     calc(0.5 * var(--space-unit));
+    --space-sm:     calc(0.75 * var(--space-unit));
+    --space-md:     calc(1.25 * var(--space-unit));
+    --space-lg:     calc(2 * var(--space-unit));
+    --space-xl:     calc(3.25 * var(--space-unit));
+    --space-xxl:    calc(5.25 * var(--space-unit));
+}
+/*------------------------------------------------------------------*/
+
+/* Default: Small phones */
+
+/* Large phones */
+@media only screen and (min-width: 640px) {}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) {}
+
+/* Desktops */
+@media only screen and (min-width: 1280px) {}
